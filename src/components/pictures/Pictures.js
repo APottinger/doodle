@@ -1,7 +1,9 @@
-const Pictures = ({ pictures }) => {
+import Picture from './picture/Picture'
+
+const Pictures = ({ pictures, deleteBtn }) => {
     return (
         <div>
-            {pictures.map(picture => (<img key={picture.id} src={picture.img_url} alt='' height='500rem' width='500rem'/>))}
+            {pictures.map(picture => <Picture key={pictures.id} picture={picture} deleteBtn={deleteBtn}/>)}
         </div>
     )
 }
