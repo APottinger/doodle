@@ -1,5 +1,8 @@
 
+
 const Header = () => {
+
+
     return (
         <div>
             <h1>doodle</h1>
@@ -10,6 +13,7 @@ const Header = () => {
                     <li style={{listStyle: 'none', padding: '2rem'}}>Contact</li>
                 </ul>
             </nav>
+            <img src="https://www.uco.edu/cfad/images/art/art-header.jpg" height="500rem" width='100%' alt="" />
         </div>
     )
 }
