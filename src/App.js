@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import About from './components/About';
 import Pictures from './components/pictures/Pictures'
-import Header from './components/Header';
-
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 function App() {
 
@@ -31,7 +31,8 @@ function App() {
     <div className="App">
       <Header />
       <About />
-      {pictures.length < 0 ? <Pictures pictures={pictures} deleteBtn={deleteBtn}/> : <h2>No Pictures Featured</h2>}
+      {pictures.length > 0 ? <Pictures pictures={pictures} deleteBtn={deleteBtn}/> : <h2>No Pictures Featured</h2>}
+      <Footer />
     </div>
   );
 }
