@@ -21,12 +21,17 @@ function App() {
   ]);
 
   //create delete feature
+  const deleteBtn = (id) => {
+    console.log(id)
+    setPictures(pictures.filter((p) => p.id !== id)) 
+  }
 
+  //conditional rendering
   return (
     <div className="App">
       <Header />
       <About />
-      <Pictures pictures={pictures}/>
+      {pictures.length < 0 ? <Pictures pictures={pictures} deleteBtn={deleteBtn}/> : <h2>No Pictures Featured</h2>}
     </div>
   );
 }
