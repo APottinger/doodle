@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { CssBaseline } from '@mui/material';
 
-import About from './components/About';
 import Pictures from './components/pictures/Pictures'
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
@@ -17,6 +17,18 @@ function App() {
     {
       id: 3,
       img_url: 'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    },
+    {
+      id: 4,
+      img_url: 'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    },
+    {
+      id: 3,
+      img_url: 'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    },
+    {
+      id: 3,
+      img_url: 'https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
     }
   ]);
 
@@ -29,10 +41,11 @@ function App() {
   //conditional rendering
   return (
     <div className="App">
+      <CssBaseline />
       <Header />
-      <About />
       {pictures.length > 0 ? <Pictures pictures={pictures} deleteBtn={deleteBtn}/> : <h2>No Pictures Featured</h2>}
       <Footer />
+      
     </div>
   );
 }
