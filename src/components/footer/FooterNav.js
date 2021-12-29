@@ -1,18 +1,17 @@
-import React from 'react'
-
+import React from 'react';
+import { Stack } from '@mui/material';
 const FooterNav = () => {
     return (
-        <div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
+        <>
+            <Stack spacing={4}>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy Policy</a>
+            </Stack>
 
-            <p>doodle&copy; 2021</p>
-        </div>
+        </>
     )
 }
 
