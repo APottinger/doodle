@@ -7,15 +7,11 @@ const Pictures = ({ pictures, deleteBtn }) => {
     /* const classes = useStyles() */
     return (
         <>
-            <Typography variant='h2'>
-                Featured Photos
-            </Typography>
-                <Grid container spacing={2}>                    
-                    {pictures.map(picture => <Grid item xs={12} sm={6} md={4}> 
+            <Grid container sx={{ rowGap: '25px', paddingLeft: '15px', mx: "auto", width: 1 }} spacing={2}>                    
+                {pictures.map(picture => <Grid item xs={12} sm={6} md={4}> 
                     <Picture key={pictures.id} picture={picture} deleteBtn={deleteBtn}/> 
-                    </Grid>)}
-                </Grid>
-            
+                </Grid>)}
+            </Grid>
         </>
     )
 }
