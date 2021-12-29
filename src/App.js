@@ -40,12 +40,11 @@ function App() {
 
   //conditional rendering
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor: '#fffffa'}}>
       <CssBaseline />
       <Header />
       {pictures.length > 0 ? <Pictures pictures={pictures} deleteBtn={deleteBtn}/> : <h2>No Pictures Featured</h2>}
       <Footer />
-      
     </div>
   );
 }
